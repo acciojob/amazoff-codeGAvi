@@ -43,14 +43,6 @@ public class OrderService {
         return orderRepository.findAllOrders();
     }
 
-    public void deletePartner(String partnerId){
-        orderRepository.deletePartner(partnerId);
-    }
-
-    public void deleteOrder(String orderId){
-        orderRepository.deleteOrder(orderId);
-    }
-
     public Integer getCountOfUnassignedOrders(){
         return orderRepository.findCountOfUnassignedOrders();
     }
@@ -62,4 +54,13 @@ public class OrderService {
     public String getLastDeliveryTimeByPartnerId(String partnerId){
         return orderRepository.findLastDeliveryTimeByPartnerId(partnerId);
     }
+
+    public void deletePartner(String partnerId){
+        orderRepository.deletePartner(partnerId);
+    }
+
+    public void deleteOrder(String orderId){
+        orderRepository.deleteOrder(orderId);
+    }
+
 }
